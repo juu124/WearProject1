@@ -9,6 +9,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.wear.compose.foundation.lazy.ScalingLazyColumn
 import androidx.wear.compose.foundation.lazy.rememberScalingLazyListState
+import androidx.wear.compose.material.Chip
 import androidx.wear.compose.material.ListHeader
 import androidx.wear.compose.material.PositionIndicator
 import androidx.wear.compose.material.Scaffold
@@ -47,6 +48,12 @@ fun HomeScreen(navController: NavHostController) {
                         textAlign = TextAlign.Center
                     )
                 }
+            }
+            item {
+                Chip(
+                    onClick = { navController.navigate("circular") },
+                    label = { Text("Circular") }
+                )
             }
         }
     }

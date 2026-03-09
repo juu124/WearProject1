@@ -28,6 +28,7 @@ import androidx.wear.compose.navigation.rememberSwipeDismissableNavController
 import androidx.wear.tooling.preview.devices.WearDevices
 import com.example.wearproject1.R
 import com.example.wearproject1.presentation.theme.WearProject1Theme
+import com.example.wearproject1.presentation.ui.CircularProgressScreen
 import com.example.wearproject1.presentation.ui.HomeScreen
 
 class MainActivity : ComponentActivity() {
@@ -56,6 +57,9 @@ fun WearApp() {
     ) {
         composable("home") {
             HomeScreen(navController)
+        }
+        composable("circular") {
+            CircularProgressScreen()
         }
     }
 }
